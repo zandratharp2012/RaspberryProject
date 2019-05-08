@@ -48,7 +48,7 @@ Docker
 Docker simplifies the packaging, distribution, installation and execution of complex applications. We installed a few containers consisting of Ubuntu, redis(open source key-value store that functions as a data structure server), debian(Linux distribution that's composed entirely of free and open-source software) ,and hello-world(minimal image). 
 
 
-..  image:: https://github.com/raspberryproject/blob/master/presentation_images/Docker.PNG
+..  image:: https://github.com/raspberryproject/blob/master/raspberryproject/presentation_images/Docker.PNG
     :scale: 50%
     :align: center 
 
@@ -62,7 +62,7 @@ Win32 Disk Imager
 This tool is used on a Windows machine and is needed to flash the SD card with the docker image. 
  
 
-..  image:: https://github.com/raspberryproject/blob/master/presentation_images/Win32.PNG
+..  image:: https://github.com/raspberryproject/blob/master/raspberryproject/presentation_images/Win32.PNG
     :scale: 50%
     :align: center 
 
@@ -76,7 +76,7 @@ Zenmap
 This tool is used in order to identify the IP address of your Raspberry Pi. 
  
 
-..  image:: https://github.com/raspberryproject/blob/master/presentation_images/Zenmap.PNG
+..  image:: https://github.com/raspberryproject/blob/master/raspberryproject/presentation_images/Zenmap.PNG
     :scale: 50%
     :align: center 
 
@@ -84,12 +84,12 @@ This tool is used in order to identify the IP address of your Raspberry Pi.
 Once your machine is up and running you can give it a cool command so it displays a hello message!
 
 
-..  image:: https://github.com/raspberryproject/blob/master/presentation_images/HelloWorld.PNG
+..  image:: https://github.com/raspberryproject/blob/master/raspberryproject/presentation_images/HelloWorld.PNG
     :scale: 50%
     :align: center
 
 
-..  image:: https://github.com/raspberryproject/blob/master/presentation_images/EchoHelloWorld.PNG
+..  image:: https://github.com/raspberryproject/blob/master/raspberryproject/presentation_images/EchoHelloWorld.PNG
     :scale: 50%
     :align: center  
 
@@ -99,7 +99,7 @@ Processor Architecture
 
 The Raspberry Pi has a Broadcom BCM2837 SoC (system-on-chip) with 4 ARM Cortex-A53 cores. Each processing core runs at 1.2Ghz with 32kB Level 1 and 512kB Level 2 cache memory, it also has a VideoCore IV graphics processor running at 400MHz. The Cortex-A53 processor is a high efficiency processor that implements the Armv8-A architecture. Armv8 supports 64-bit data processing, extended virtual addressing and a 64-bit general purpose registers. The Cortex-A53 processor has the following configuration.
 
-..  image:: https://github.com/raspberryproject/blob/master/presentation_images/A53Configuration.png
+..  image:: https://github.com/raspberryproject/blob/master/raspberryproject/presentation_images/A53Configuration.png
     :scale: 50%
     :align: center 
 
@@ -117,12 +117,12 @@ ARM is a family of instruction set architectures for computer processors and is 
 
 Below is an image of the ARM format summary and instruction set in more detail.
 
-..  image:: https://github.com/raspberryproject/blob/master/presentation_images/Formatsummary.PNG
+..  image:: https://github.com/raspberryproject/blob/master/raspberryproject/presentation_images/Formatsummary.PNG
     :scale: 50%
     :align: center
 
 
-..  image:: https://github.com/raspberryproject/blob/master/presentation_images/InstructionARM.PNG
+..  image:: https://github.com/raspberryproject/blob/master/raspberryproject/presentation_images/InstructionARM.PNG
     :scale: 50%
     :align: center
 
@@ -144,13 +144,13 @@ First we need to download the Docker image from the website below.
 
 Once the download has completed, you can use terminal to extract the zip file using "unzip Hypriot-rpi-201???.img.zip." Once the download has completed, you can flash your SD card using something like the following command in terminal:
 
-..  image:: https://github.com/raspberryproject/blob/master/presentation_images/FlashSD.PNG
+..  image:: https://github.com/raspberryproject/blob/master/raspberryproject/presentation_images/FlashSD.PNG
     :scale: 50%
     :align: center
 
 You will then boot the Raspberry Pi connecting it with power, SD card inserted, HDMI to external display hooked up and ethernet cable connected. Once Docker is running we need to be able to access it remotely. Locating your IP address is necessary so we are able to find that with typing in "ifconfig getifaddre en1" or using en0 if connected by ethernet to your machine. Once your IP is located, you can use Nmap in terminal in order to locate the IP address of your raspberry pi. If the command is not recognized in terminal and your system does not have Nmap installed, you can download the package installer at nmap.org for MacOS X installer or use Home-brew to install from the command line on your machine. Once you know Nmap is working, using the following command, "nmap -sP <yourIPaddressgoeshere>/24 | grep black-pearl", will allow you to locate the IP address of your Raspberry Pi. Once you find it, you can type in "ssh pirate@<RasbperryPiIPAddressgoeshere>" and it will ask you to enter a password which is "Hypriot". You will enter "yes" when asked if you are sure you want to connect to the Raspberry Pi. To check if everything worked as it should have, type in the command "docker info" and you should see information about the containers and other items. It should look similar to the image below.
 
-..  image:: https://github.com/raspberryproject/blob/master/presentation_images/Dockerinfo.PNG
+..  image:: https://github.com/raspberryproject/blob/master/raspberryproject/presentation_images/Dockerinfo.PNG
     :scale: 50%
     :align: center
 
@@ -160,7 +160,7 @@ You are ready to install an image using Docker and you can do something really c
 
 Once you choose the one desired, using your machine to access Raspberry Pi remotely, you can enter a command such as "docker run ubuntu." Let's say you wanted to run a program such as "Hello-World" also located in the Docker Hub. You can pull it using "docker pull hello-horld" and ask Docker to run it. It would look something like the following image:
 
-..  image:: https://github.com/raspberryproject/blob/master/presentation_images/HelloWorld.PNG
+..  image:: https://github.com/raspberryproject/blob/master/raspberryproject/presentation_images/HelloWorld.PNG
     :scale: 50%
     :align: center
 
@@ -172,13 +172,13 @@ For the Windows process we first installed NOOBS(New Out Of Box Software) onto t
 
 Once you have NOOBS on the SD card, insert it into the Raspberry Pi and boot it up. You should see a screen like this:
 
-..  image:: https://github.com/raspberryproject/blob/master/presentation_images/noobs.png
+..  image:: https://github.com/raspberryproject/blob/master/raspberryproject/presentation_images/noobs.png
     :scale: 50%
     :align: center
 
 On this screen you can select the Raspbian OS to install or you can connect to the internet via WiFi or ethernet and get a list of different operating systems to install. The installation process takes quit some time for Raspbian so be patient! Once the installation is complete you will be prompted to reboot the Pi. After the reboot, Raspbian starts and you should see a screen similar to the image below: 
 
-..  image:: https://github.com/raspberryproject/blob/master/presentation_images/raspbianstretch.png
+..  image:: https://github.com/raspberryproject/blob/master/raspberryproject/presentation_images/raspbianstretch.png
     :scale: 50%
     :align: center
 
@@ -190,20 +190,6 @@ After setting up and connecting VNC, you can disconnect the monitor and keyboard
 
 Now we installed Docker using the terminal by typing in the following command:
 
-..  image:: https://github.com/raspberryproject/blob/master/presentation_images/dockercmd.png
+..  image:: https://github.com/raspberryproject/blob/master/raspberryproject/presentation_images/dockercmd.png
     :scale: 50%
     :align: center
-
-
-
-
-
-
-
-
-
-
-
-
-
-
